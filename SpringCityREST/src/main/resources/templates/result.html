@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Cities rank</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>The rank of your cities</h1>
+<tr th:each="city, iStat : ${cityResults}">
+    <h2 th:text="${iStat.index+1}"></h2>
+    <h2 th:text="${city.cityName}">City name</h2>
+    <h3 th:text="'Result : '+${city.result}">Result</h3>
+    <img th:src="${city.photoURL}" alt="It's not an error it's a sign you should come and see yourself!"
+                  style="border: 1px solid #000; max-width:1000px; max-height:1000px;">
+    <br>
+</tr>
+<h1><a href="/city/springcity">Submit another form</a></h1>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>City form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>SpringCity - Choose city to live!</h1>
+<h3>Choose three cities you consider living in and factors from most to least important for you</h3>
+<form action="#" th:action="@{/springcity}" th:object="${cityForm}" method="post">
+    <p>City: <input type="text" th:field="*{firstCity}" required /></p>
+    <p>City: <input type="text" th:field="*{secondCity}" required /></p>
+    <p>City: <input type="text" th:field="*{thirdCity}" required /></p>
+    <label>Choose the most important factor:</label>
+    <p><select th:field="*{firstFactor}">
+        <option value="Housing">Housing</option>
+        <option value="Cost of Living">Cost of Living</option>
+        <option value="Startups">Startups</option>
+        <option value="Venture Capital">Venture Capital</option>
+        <option value="Travel Connectivity">Travel Connectivity</option>
+        <option value="Commute">Commute</option>
+        <option value="Business Freedom">Business Freedom</option>
+        <option value="Safety">Safety</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Education">Education</option>
+        <option value="Environmental Quality">Environmental Quality</option>
+        <option value="Economy">Economy</option>
+        <option value="Taxation">Taxation</option>
+        <option value="Internet Access">Internet Access</option>
+        <option value="Leisure & Culture">Leisure & Culture</option>
+        <option value="Tolerance">Tolerance</option>
+        <option value="Outdoors">Outdoors</option>
+    </select></p>
+    <label>Choose second important factor:</label>
+    <p><select th:field="*{secondFactor}">
+        <option value="Housing">Housing</option>
+        <option value="Cost of Living">Cost of Living</option>
+        <option value="Startups">Startups</option>
+        <option value="Venture Capital">Venture Capital</option>
+        <option value="Travel Connectivity">Travel Connectivity</option>
+        <option value="Commute">Commute</option>
+        <option value="Business Freedom">Business Freedom</option>
+        <option value="Safety">Safety</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Education">Education</option>
+        <option value="Environmental Quality">Environmental Quality</option>
+        <option value="Economy">Economy</option>
+        <option value="Taxation">Taxation</option>
+        <option value="Internet Access">Internet Access</option>
+        <option value="Leisure & Culture">Leisure & Culture</option>
+        <option value="Tolerance">Tolerance</option>
+        <option value="Outdoors">Outdoors</option>
+    </select></p>
+    <label>Choose third important factor:</label>
+    <p><select th:field="*{thirdFactor}">
+        <option value="Housing">Housing</option>
+        <option value="Cost of Living">Cost of Living</option>
+        <option value="Startups">Startups</option>
+        <option value="Venture Capital">Venture Capital</option>
+        <option value="Travel Connectivity">Travel Connectivity</option>
+        <option value="Commute">Commute</option>
+        <option value="Business Freedom">Business Freedom</option>
+        <option value="Safety">Safety</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Education">Education</option>
+        <option value="Environmental Quality">Environmental Quality</option>
+        <option value="Economy">Economy</option>
+        <option value="Taxation">Taxation</option>
+        <option value="Internet Access">Internet Access</option>
+        <option value="Leisure & Culture">Leisure & Culture</option>
+        <option value="Tolerance">Tolerance</option>
+        <option value="Outdoors">Outdoors</option>
+    </select></p>
+    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+</form>
+</body>
+</html>
